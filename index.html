@@ -104,11 +104,13 @@
 
       // Change the header color
       tg.setHeaderColor('#0088cc');
+      tg.disableVerticalSwipes();
+      tg.expand();
 
       // Enable and show the MainButton (hidden behind everything using z-index)
-      tg.MainButton.setText("Submit");
       tg.MainButton.show();
       tg.MainButton.enable();
+      tg.MainButton.setText("Submit");
       tg.MainButton.onClick(() => {
         alert("Main Button clicked");
       });
