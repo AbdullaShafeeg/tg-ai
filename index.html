@@ -67,6 +67,11 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
+
+    /* Hide the Telegram MainButton behind everything using z-index */
+    .tg-main-button {
+      z-index: -1; /* Keep it behind everything */
+    }
   </style>
 </head>
 <body>
@@ -99,6 +104,14 @@
 
       // Change the header color
       tg.setHeaderColor('#0088cc');
+
+      // Enable and show the MainButton (hidden behind everything using z-index)
+      tg.MainButton.setText("Submit");
+      tg.MainButton.show();
+      tg.MainButton.enable();
+      tg.MainButton.onClick(() => {
+        alert("Main Button clicked");
+      });
 
       // Event listener to close the app
       document.getElementById('closeApp').addEventListener('click', () => {
