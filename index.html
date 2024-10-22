@@ -14,12 +14,37 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       background-color: #f0f0f0;
     }
+
     h1 {
       color: #0088cc;
     }
+
+    .header {
+      padding: 10px;
+      background-color: #0088cc;
+      color: white;
+    }
+
+    .container {
+      flex-grow: 1;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e0e0e0;
+    }
+
+    .footer {
+      padding: 20px;
+      background-color: #0088cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
     button {
       padding: 10px 20px;
       font-size: 16px;
@@ -29,15 +54,38 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #0077bb;
+    }
+
+    textarea {
+      width: 80%;
+      height: 60px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to the Telegram Mini App</h1>
-  <p id="username">Loading user info...</p>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Welcome to the Telegram Mini App</h1>
+    <p id="username">Loading user info...</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <p>This is a 96px height container</p>
+  </div>
+
+  <!-- Footer with Textarea -->
+  <div class="footer">
+    <textarea id="messageInput" placeholder="Type your message here..."></textarea>
+  </div>
 
   <button id="closeApp">Close App</button>
 
